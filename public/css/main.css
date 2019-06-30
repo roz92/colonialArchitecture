@@ -34,7 +34,19 @@
 @import url("micons/micons.css");
 @import url("fonts.css");
 
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
 
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
 /* ===================================================================
  *  02. base style overrides - (_document-setup)
  *
@@ -96,7 +108,7 @@ a:hover, a:focus {
 h1, h2, h3, h4, h5, h6,
 .h01, .h02, .h03, .h04, .h05, .h06 {
   font-family: "montserrat-bold", sans-serif;
-  color: #151515;
+  color: white;
   font-style: normal;
   text-rendering: optimizeLegibility;
   margin-bottom: 2.1rem;
@@ -383,6 +395,10 @@ img.pull-right {
   margin: 1.5rem 0 0 3rem;
 }
 
+img {
+  border-radius: 50%;
+}
+
 img.pull-left {
   margin: 1.5rem 3rem 0 0;
 }
@@ -630,8 +646,7 @@ input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
-textarea:focus,
-select:focus {
+textarea:focus {
   color: #000000;
 }
 
@@ -2618,12 +2633,23 @@ html[data-useragent*='MSIE 10.0'] .scrolldown,
 #contact input[type="text"],
 #contact input[type="password"],
 #contact input[type="email"],
+#contact select,
 #contact textarea {
   width: 100%;
-  color: rgba(255, 255, 255, 0.6);
+  color: #d4d4d4 /* #30434b; */ /* rgba(255, 255, 255, 0.6); */
   margin-bottom: 3.6rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: #1d2528; /* rgba(255, 255, 255, 0.1); */
 }
+
+#contact select.form-control, #contact select:focus, #contact option, #contact form ::placeholder, #contact form, #contact input, #contact textarea {
+  color: #d4d4d4;
+}
+
+#contact option:first-of-type {
+  color: white;
+}
+
+/*#contact select:invalid { color: black; }*/
 
 #contact input[type="text"]:focus,
 #contact input[type="password"]:focus,
@@ -2822,7 +2848,7 @@ footer h4.h05 {
   margin-bottom: 3.6rem;
 }
 footer h4.h05::after {
-  display: block;
+  display: none;
   content: "";
   width: 100px;
   height: 1px;

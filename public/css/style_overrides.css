@@ -1,0 +1,24 @@
+.card, .card-title {
+	color: white;
+}
+
+.card { 
+width: 18rem;
+padding: 6px 22px;
+background-color: gray;
+margin: 4px;
+}
+
+.grid {
+	margin-top: 20px;
+	display: flex;
+	width: 98%;
+	flex-wrap: wrap;
+}
+.grid-item-20 {
+	flex: 1 0 20%;
+}
+
+img {
+	border-radius: 0%;
+}

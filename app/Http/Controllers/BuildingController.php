@@ -1,4 +1,3 @@
-
 <?php
 
 namespace App\Http\Controllers;
@@ -16,9 +15,12 @@ class BuildingController extends Controller
      */
     public function index()
     {
-        $buildings = Building::latest()->paginate(6);
-
-        return view('buildings.index',compact('buildings'));
+        $buildings = Building::get();
+        // usort($buildings, function($a, $b) {
+        //     return $a->location > $b->location; 
+        // });
+        // Check if buildig image exists in folder
+        return view('buildings.index', compact('buildings'));
     }
 
 
@@ -29,7 +31,36 @@ class BuildingController extends Controller
      */
     public function create()
     {
-        $values = ['value 1', 'value 2'];
+        $values = ["airfields", "apartment houses", "auction house", "banks",
+                    "broadcasting stations", "churches", "city halls", "corporate headquarters", "crematories", "crime laboratories", "dwellings", "embassies", "exhibition buildings", "factories", "government buildings", "headhouses", "hospitals", "hotels",
+                        "houses",
+                        "hydroelectric power plants",
+                        "industrial companies",
+                        "libraries",
+                        "memorials",
+                        "monastries",
+                        "morgues",
+                        "mosques",
+                        "motion picture theaters",
+                        "observatories",
+                        "office buildings",
+                        "palaces",
+                        "pavilions",
+                        "post offices",
+                        "religious buildings",
+                        "retirement homes",
+                        "roads",
+                        "schools",
+                        "slaughterhouses",
+                        "societies' buildings",
+                        "stores",
+                        "swimming pools",
+                        "theaters",
+                        "trainstations",
+                        "urban plannings",
+                        "water towers",
+                        "work spaces"
+                    ];
 
         return view('buildings.create', compact('values'));
     }

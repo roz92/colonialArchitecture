@@ -14,5 +14,8 @@ class ImportController extends Controller
     public function __invoke(Request $request)
     {
         Excel::import(new BuildingImport, 'data.xlsx');
+
+        return redirect()->route('buildings.index')
+            ->with('success','Building created successfully.');
     }
 }

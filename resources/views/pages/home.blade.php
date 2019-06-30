@@ -1,4 +1,4 @@
-@extends('layouts.app')
+ @extends('layouts.app')
 
 @section('content')
     <section id="home">
@@ -16,8 +16,8 @@
                         </h1>
 
                         <div class="more animate-intro">
-                            <a class="smoothscroll button stroke" href="#about">
-                                Instructions
+                            <a class="smoothscroll button stroke" href="#contact">
+                                Upload photos
                             </a>
                         </div>
 
@@ -46,8 +46,8 @@
 
         <div class="intro">
           <h3 class="animate-this">Instructions in a nutshell</h3>
-          <p>Short description and instruction <br>
-            (e.g. Upload photos of colonial buildings and add some text where possible!</p> 
+          <p>First of all, thank you for helping me! <br>
+              Upload photos of colonial buildings that you can find in your surroundings in Indonesia and fill in the other empty fields where possible!</p> 
         </div>   
 
       </div> <!-- end col-full  -->
@@ -89,33 +89,33 @@
       <div class="row narrow section-intro with-bottom-sep animate-this">
         <div class="col-twelve">
           <h3>Existing dataset</h3>
-          <h1>Click on here to find the some of the existing colonial architecture buildings</h1>       
-          
-          <p class="lead">some text</p>          
+          <p class="lead">Click on <a href="{{ route('buildings.index') }}">here</a> to find the some of the existing colonial architecture buildings</p>          
 
             <div class="row services-content">
       <div class="services-list block-1-2 block-tab-full group">
         <div class="bgrid service-item animate-this"> 
 
-          <span class="icon"><i class="icon-paint-brush"></i></span>            
+          <img src="images/colonial.jpg" alt="Avatar">           
 
               <div class="service-content">
-                <h3 class="h05">Colonialarchitecture.eu</h3>
+                <a href="http://colonialarchitecture.eu/"><h3 class="h05">Colonialarchitecture.eu</h3></a>
+                
 
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                <p>This website is dedicated to buildings and sites designed and created between circa 1850 and 1970 in countries outside of Europe that at the time were ruled by Europeans.
               </p>              
             </div>             
 
         </div> <!-- end bgrid -->
 
-        <div class="bgrid service-item animate-this"> 
+        <div class="bgrid service-item animate-this">
 
-          <span class="icon"><i class="icon-earth"></i></span>                          
+         <!-- <span class="icon"><i class="icon-earth"></i></span>  -->
+           <img src="images/archimedial.jpg" alt="Avatar">                         
 
               <div class="service-content"> 
-                <h3 class="h05">ArchiMediaL</h3>  
+                <a href="http://archimedial.net/"><h3 class="h05">ArchiMediaL</h3></a>
 
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                <p>ArchiMediaL aims to enriching and linki historical architectural and urban image collections. In close cooperation between architectural historians and computer scientists, ArchiMediaL researches the automatic recognition of architectural and urban forms in diverse visual media that are available digitally or on the web.
               </p>              
               </div>                            
 
@@ -133,87 +133,16 @@
 
   </section>
 
-    <!-- about
-    ================================================== -->
-   <section id="portfolio">
-    
-    <div class="intro-wrap">
+<!--    ================================================== -->
 
-      <div class="row narrow section-intro with-bottom-sep animate-this">
-        <div class="col-twelve">
-
-                <a class="btn btn-success" href="{{ route('buildings.index') }}"><h3>Upload New Photos</h3></a>
-            </div> <!-- end col-full -->
-        </div> <!-- end row -->
-
-
-
-    </section> <!-- end services -->
-
-    <section id="testimonials">
-
-        <div class="row">
-            <div class="col-twelve">
-                <h2 class="animate-this">About Me</h2>
-            </div>
-        </div>
-
-        <div class="row flex-container">
-            <div id="testimonial-slider" class="flex-slider animate-this">
-                <ul class="slides">
-                    <li>
-                      <p>
-                          BLA BLA BLA
-                      </p>
-                        <div class="testimonial-author">
-                          <img src="images/avatars/test.png" alt="Author mage">
-                          <div class="author-info">
-                              Roz Sabir
-                              <span class="position">Msc Information Sciences, VU Amsterdam</span>
-                          </div>
-                        </div>
-                    </li> <!-- end slide -->
-                </ul> <!-- end slides -->
-            </div> <!-- end testimonial-slider -->
-        </div> <!-- end flex-container -->
-    </section> <!-- end testimonials -->
-
-    <section id="contact">
-
-        <div class="overlay"></div>
-
-        <div class="row narrow section-intro with-bottom-sep animate-this">
-            <div class="col-twelve">
-                <h3>Contact</h3>
-                <h1>Get In Touch.</h1>
-
-                <p class="lead">Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat,
-                    accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-
-                <h5>Contact Information</h5>
+<section>
+      <!-- <div class="row narrow section-intro with-bottom-sep animate-this"> -->
+        <!-- <div class="col-twelve"> -->
+                @include("partials/create_import")
                 
-                <div class="cinfo">
-                    <h6>Email Me At</h6>
-                    <p>
-                        r.sabir@student.vu.nl<br>
-                        rozsabir1@gmail.com
-                    </p>
-                </div> <!-- end cinfo -->
+                <!-- <a class="btn btn-success" href="{{ route('buildings.index') }}"><h3>Upload New Photos</h3></a> -->
+            <!-- </div> end col-full -->
+        <!-- </div> end row -->
+  </section> <!-- end services -->
 
-                <div class="cinfo">
-                    <h6>Call Me At</h6>
-                    <p>
-                        Mobile: (+31) 6 411 86323<br>
-                    </p>
-                </div>
-            </div>
-        </div> <!-- end section-intro -->
-
-
-        </div> <!-- end cinfo -->
-
-        </div> <!-- end row contact-content -->
-
-    </section> <!-- end contact -->
 @endsection

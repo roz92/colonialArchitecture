@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
+
 @section('content')
-   <!-- home
-   ================================================== -->
+
    <section id="home">
 
     <div class="overlay"></div>
@@ -18,7 +18,7 @@
                 </h1> 
 
                 <div class="more animate-intro">
-                  <a class="smoothscroll button stroke" href="{{ route('buildings.create') }}">
+                  <a class="smoothscroll button stroke" href="#upload">
                     Upload
                   </a>
                 </div>              
@@ -37,74 +37,40 @@
       </div>
 
     @endif
-        <div class="row">
 
+  <div class="row">
+  <div class="grid">
     @foreach ($buildings as $building)
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{ $building->photo() }}" alt="Card image cap">
+        
+            <div class="card grid-item-20">
+                @if ($building->image)
+                <img class="card-img-top" src="{{ $building->image }}" alt="Card image cap">
+                @elseif ($building->bt)
+                <img class="card-img-top" src="http://colonialarchitecture.eu/islandora/object/{{ $building->bt }}/datastream/OBJ" alt="Card image cap">
+                @endif
                 <div class="card-body">
                     <h5 class="card-title">{{ $building->name }}</h5>
                     <p class="card-text">{{ $building->description }}</p>
                     <p class="card-text">{{ $building->text}}</p>
-                    <a href="/buildings/{{ $building->id }}" class="btn btn-primary">Go somewhere</a>
-                    @if($building->maps())
-                        <a href="{{ $building->maps() }}" target="_blank" class="btn btn-primary">View on Google maps</a>
+                    <!-- <a href="/buildings/{{ $building->id }}" class="btn btn-primary">Go somewhere</a> -->
+                    @if($building->lat && $building->long)
+                        <a href="https://www.google.com/maps/search/?api=1&query={{ $building->lat }},{{ $building->long }}" target="_blank" class="btn btn-primary">View on Google maps</a>
                     @endif
                 </div>
             </div>
-        </div>
-    
+            
     @endforeach
-        </div>
+  </div> <!-- .grid div-->
+</div> <!-- .row div --> 
 
-    {!! $buildings->links() !!}    
 
+   </section>
+   
+<!--  Java Script
+   ================================================== 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
 
-<!--               <h3>Send Us A Message</h3>
-                  <form name="contactForm" id="contactForm" method="post">          
-                  <div class="form-field">
-                    <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
-                  </div>
-
-                    <div class="row">
-                      <div class="col-six tab-full">
-                        <div class="form-field">
-                          <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
-                        </div>                   
-                      </div>
-                    </div>
-                      
-                    <div class="col-six tab-full">              
-                      <div class="form-field">
-                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-                      </div>                   
-                    </div>
-                  
-                  </div>  
-
-                    <div class="form-field">
-                      <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
-                    </div>  -->
-
-             <!--   <div class="form-field">
-                  <button class="submitform">Submit</button>
-
-                  <div id="submit-loader">
-                    <div class="text-loader">Sending...</div>                             
-                    <div class="s-loader">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-              </div> -->
-            </div>
-               </div>
-
-          </form>
-        
-       </div> <!-- end col-full -->
-    </div> <!-- end row -->
-
-   </section> <!-- end about -->
-
-@endsection
+</header>
+ -->@endsection

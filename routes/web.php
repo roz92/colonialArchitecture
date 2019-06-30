@@ -13,12 +13,12 @@
 
 
 Route::get('/', 'PageController@home');
-Route::get('info', 'PageController@info');
-Route::get('surprise', 'PageController@surprise');
 Route::get('import', 'ImportController');
 
 Route::resource('buildings', 'BuildingController')->except(['edit', 'update', 'destroy']);
 
-Route::get('image-test', function(){
-    return view('image');
-});
+
+
+// Route::get('image-test', function(){
+//     return view('image');
+// });
