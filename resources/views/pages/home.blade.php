@@ -12,7 +12,7 @@
 
                         <h3 class="animate-intro">Welcome to</h3>
                         <h1 class="animate-intro">
-                            Metadata Enrichment of Colinial Architecture
+                            Metadata Enrichment of Colonial Architecture
                         </h1>
 
                         <div class="more animate-intro">
