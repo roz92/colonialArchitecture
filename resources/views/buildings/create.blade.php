@@ -157,7 +157,7 @@
                <!--  <label>Construction date:</label> -->
                 <select name="build_in" class="form-control" >
                     <option selected disabled>Select a year</option>
-                    @for($year = 1950; $year <= date('Y'); $year++)
+                    @for($year = 1850; $year <= date('Y'); $year++)
                         <option value="{{ $year }}">{{ $year }}</option>
                     @endfor
                 </select>
