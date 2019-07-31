@@ -13,6 +13,7 @@
         
                     <p>r.sabir@student.vu.nl<br>
                     rozsabir1@gmail.com
+                    </p>
 
                     <p>
                         Mobile: (+31) 6 411 86323<br>
@@ -27,7 +28,16 @@
                         </div>
                     </li> <!-- end slide -->
                 </ul> <!-- end slides -->
-            </div> <!-- end testimonial-slider -->
+                </div> <!-- end testimonial-slider -->
+
+                 <h4 class="h05">Privacy Notice</h4>
+
+                    <div class="col-twelve">    
+                    <p>
+                        The only information this website collects, are the text and images of the buildings that visitors upload. Since no personal information is asked, no personal data will be collected. <br>
+                        If you would like to have your building's image and text deleted, please contact me.
+                    </p>
+                </p>
 
         </div> <!-- end footer-about -->
 

@@ -73,4 +73,5 @@
    <script src="js/main.js"></script>
 
 </header>
- -->@endsection
+ -->
+ @endsection
