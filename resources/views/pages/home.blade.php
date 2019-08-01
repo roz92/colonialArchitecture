@@ -17,7 +17,7 @@
             </div> 
 
         <div class="scrolldown">
-            <a href="#contact" class="scroll-icon smoothscroll">Scroll Down
+            <a href="#about" class="scroll-icon smoothscroll">Scroll Down
               <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
             </a>
         </div>
