@@ -101,7 +101,7 @@ class BuildingController extends Controller
 
         $image = $request->file('image');
         $filename = date('YmdHis') . "." . $image->getClientOriginalExtension();
-        $image->move(public_path('images'), $filename);
+        $res = $image->move(public_path() . "_html/images", $filename); // local test delete second part"
 
         $data = $request->all();
         $data['image'] = '/images/'.$filename;
