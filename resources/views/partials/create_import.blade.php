@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="form-field">
                     <!-- <label for="image-field">Photo of Building:</label> -->
-                        <button type="submit" class="btn btn-primary" onclick="document.querySelector('#image-field').click();" style="display: block; width: 100%; margin-bottom: -30px;">Upload</button>
+                        <button type="button" class="btn btn-primary" onclick="document.querySelector('#image-field').click();" style="display: block; width: 100%; margin-bottom: -30px;">Upload</button>
                     <input type="file" name="image" class="form-control-file" id="image-field" style="visibility: hidden;">
                 </div>
             </div>
