@@ -40,7 +40,11 @@
             <div class="card-body">
               <h5 class="card-title">{{ $building->name }}</h5>
                 <p class="card-text">{{ $building->description }}</p>
+                <p class="card-text">{{ $building['build-in']}}</p>
+                <p class="card-text">{{ $building->location}}</p>
+                <p class="card-text">{{ $building->street}}</p>
                 <p class="card-text">{{ $building->text}}</p>
+
                     <!-- <a href="/buildings/{{ $building->id }}" class="btn btn-primary">Go somewhere</a> -->
               @if($building->lat && $building->long)
                 <a href="https://www.google.com/maps/search/?api=1&query={{ $building->lat }},{{ $building->long }}" target="_blank" class="btn btn-primary">View on Google maps</a>
