@@ -1,5 +1,5 @@
-Colonial Architecture Webapplication 
-Metadata enrichment and bias detection of colonial architecture
+# Colonial Architecture Webapplication 
+## Metadata enrichment and bias detection of colonial architecture
 
 
 A web application build to crowdsource images of colonial architecture in Indonesia for MSc thesis in Information Sciences.
