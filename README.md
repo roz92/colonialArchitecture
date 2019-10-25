@@ -1,2 +1,9 @@
-lijst met type gebouwen AAT optie geven dat mensen zelf een type gebouw toevoegen
-foto toevoegen uit mapje eerst met zelfde bt nr, if not ga naar link 
+Colonial Architecture Webapplication 
+Metadata enrichment and bias detection of colonial architecture
+
+
+A web application build to crowdsource images of colonial architecture in Indonesia for MSc thesis in Information Sciences.
+
+The framework of Laravel has been used. For further information on how to use these files see:
+https://laravel.com/docs/6.x/installation
+
