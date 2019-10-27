@@ -1,5 +1,5 @@
 # Colonial Architecture Webapplication 
-A web application build to crowdsource images of colonial architecture in Indonesia for MSc thesis in Information Sciences.
+A web application build to crowdsource images of colonial architecture in Indonesia for a MSc thesis in Information Sciences.
 
 ## Getting Started
 ```
